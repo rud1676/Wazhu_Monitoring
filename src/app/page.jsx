@@ -1,5 +1,11 @@
-import { Box } from "@mui/material";
+import ClientInfoTable from "./ClientInfoTable";
 
-export default function Home() {
-  return <Box sx={{ fontSize: "100px" }}>홈</Box>;
-}
+const Home = () => {
+  return (
+    <div className="p-10">
+      <ClientInfoTable />
+    </div>
+  );
+};
+
+export default Home;

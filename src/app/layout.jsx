@@ -1,22 +1,26 @@
 import AppContainer from "@/components/frame/appContainer";
-import "../assets/css/styles.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import "@/assets/css/styles.css";
 
 export const metadata = {
-  title: "씨네스투어",
-  description: "씨네스투어",
+  title: "Agent Monitoring - for using Wazhu api",
+  description: "Wazhu를 사용한 모니터링 시스템 입니다.",
   charset: "utf-8",
   viewPort: "width=device-width, initial-scale=1.0",
 };
 
-export default function RootLayout({ children }) {
+const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        style={{
+          maxWidth: "820px",
+          minWidth: "320px",
+          margin: "auto",
+        }}
+      >
         <AppContainer>{children}</AppContainer>
       </body>
     </html>
   );
-}
+};
+export default RootLayout;
